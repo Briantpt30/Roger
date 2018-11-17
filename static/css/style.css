@@ -1,3 +1,4 @@
-img{
-    align-content: center;
+body{
+    background-image: url("static/images/IMG_7176.JPG");
+    transform : rotate(180deg);
 }

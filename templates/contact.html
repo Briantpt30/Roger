@@ -3,25 +3,26 @@
 <h2>Contact Roger<br>
     <small class="text-muted">For Bookings, Lessons, or Questions</small>
 </h2>
-
-<div class="form-group">
+<form action="/contact" method="POST">
+        <div class="form-group">
+        <form action="/contact" method="POST">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 </div>
 
 <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" aria-describedby="emailHelp">
+        <input name="name" type="text" class="form-control" id="exampleInputPassword1" aria-describedby="emailHelp">
 </div>
 
 <div class="form-group">
         <label for="exampleTextarea">Send a Message</label>
-        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+        <textarea name="body" class="form-control" id="exampleTextarea" rows="3"></textarea>
 </div>
 
 </div>        
 
-<button type="submit" class="btn btn-primary">Send</button>
-
+<input type="submit" class="btn btn-primary" value="Send">
+</form>
 {% endblock %}

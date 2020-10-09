@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, render_template, session, flash
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -10,7 +10,7 @@ app.config.update(
     MAIL_USERNAME= 'briantpt30@gmail.com',
     MAIL_PASSWORD='Casa1948'
 )
-mail = Mail(app)
+# mail = Mail(app)
 app.secret_key = 'y337kGcys&zP3B' 
 
 @app.route('/')
@@ -32,10 +32,10 @@ def contact():
         sender = request.form['email']
         body = request.form['body']
 
-        msg = Message(subject='test', recipients=['briantpt30@gmail.com'])
-        msg.body = body
-        mail.sender = sender
-        mail.send(msg)
+        # msg = Message(subject='test', recipients=['briantpt30@gmail.com'])
+        # msg.body = body
+        # mail.sender = sender
+        # mail.send(msg)
 
         return "Mail Sent"
 
